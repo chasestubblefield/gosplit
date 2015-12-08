@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/chasetopher/gosplit.svg)](https://travis-ci.org/chasetopher/gosplit)
+
 # GoSplit
 
 Terminal-based speedrun timer written in [Go](https://golang.org).
