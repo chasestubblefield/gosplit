@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func TestDurationString(t *testing.T) {
+func TestFormatDuration(t *testing.T) {
 	cases := []struct {
 		in, want string
 	}{
@@ -19,9 +19,9 @@ func TestDurationString(t *testing.T) {
 		if err != nil {
 			t.Error(err)
 		}
-		got := duration(d).String()
+		got := formatDuration(d)
 		if got != c.want {
-			t.Errorf("duration(%q).String() == %q, want %q", c.in, got, c.want)
+			t.Errorf("formatDuration(%q) == %q, want %q", c.in, got, c.want)
 		}
 	}
 }
