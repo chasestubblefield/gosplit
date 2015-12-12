@@ -2,17 +2,17 @@ package main
 
 import "time"
 
-type splitsData struct {
-	Game   game
-	Splits []split
+type SplitsData struct {
+	Game
+	Splits []Split
 }
 
-type game struct {
+type Game struct {
 	Name, Category string
 }
 
-type split struct {
+type Split struct {
 	Name         string
-	PersonalBest time.Duration
-	BestSegment  time.Duration
+	PersonalBest time.Duration "pb"
+	BestSegment  time.Duration "best_segment"
 }
