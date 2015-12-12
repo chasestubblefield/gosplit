@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
+import "time"
 
 type splitsData struct {
 	Game game
