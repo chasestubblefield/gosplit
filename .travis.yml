@@ -1,1 +1,3 @@
 language: go
+
+after_script: cat format_duration_test.go
