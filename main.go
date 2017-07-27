@@ -3,12 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	testRandomStuff()
+	doUIStuff()
+	// testRandomStuff()
 	// doFakeSplits()
 }
 
-func testRandomStuff() {
-	inYAML :=
+var exampleYML =
 `game:
   name: 'The Legend of Zelda: Ocarina of Time'
   category: Any%
@@ -41,6 +41,9 @@ splits:
   pb: 22m21.0323713s
   best_segment: 3m39.0509277s
 `
+
+func testRandomStuff() {
+	inYAML := exampleYML
 	inYAMLbytes := []byte(inYAML)
 	splits, err := importFromYAML(inYAMLbytes)
 	fmt.Printf("importFromYAML::\ninput:\n%voutput:\n%v, %v\n", inYAML, splits, err)
